@@ -221,7 +221,7 @@
 		F852B7621955180F00C6C504 /* APPShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPShareViewController.m; sourceTree = "<group>"; };
 		F85A4B681950C0B1002BF41A /* DataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataModel.h; sourceTree = "<group>"; };
 		F85A4B691950C136002BF41A /* DataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataModel.m; sourceTree = "<group>"; };
-		F85FC7DE19675FD500842DD1 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		F85FC7DE19675FD500842DD1 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		F8749568196E0362009D43DB /* APPContentCategoryController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APPContentCategoryController.h; sourceTree = "<group>"; };
 		F874956D196E0376009D43DB /* APPContentCategoryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPContentCategoryController.m; sourceTree = "<group>"; };
 		F875A38D1969FDA90027F6B1 /* APPTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APPTabBarController.h; sourceTree = "<group>"; };
