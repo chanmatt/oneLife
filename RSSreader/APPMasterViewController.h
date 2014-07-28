@@ -7,7 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DataModel.h"
+#import "HHPanningTableViewCell.h"
+#import <AVFoundation/AVSpeechSynthesis.h>
+#import <GooglePlus/GooglePlus.h>
+#import "RSSParser.h"
 
-@interface APPMasterViewController : UITableViewController
+
+@interface APPMasterViewController : UITableViewController <HHPanningTableViewCellDelegate, AVSpeechSynthesizerDelegate, GPPSignInDelegate, RSSParserClassDelegate>
+
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *playButton;
+
+@property (nonatomic, strong) DataModel *dataModel;
+
+@property (nonatomic, strong) NSMutableDictionary *shareObject;
+
+- (IBAction) edit;
+- (IBAction) play;
 
 @end

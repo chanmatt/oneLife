@@ -8,38 +8,43 @@
 
 #import "APPDetailViewController.h"
 
+#import "GAI.h"
+#import "GAIFields.h"
+#import "GAIDictionaryBuilder.h"
+
 @interface APPDetailViewController ()
-- (void)configureView;
+
 @end
 
 @implementation APPDetailViewController
 
 #pragma mark - Managing the detail item
 
-- (void)setDetailItem:(id)newDetailItem
+
+- (void)viewWillAppear:(BOOL)animated
 {
-    if (_detailItem != newDetailItem) {
-        _detailItem = newDetailItem;
-        
-        // Update the view.
-        [self configureView];
-    }
+    [super viewWillAppear:YES];
+    id tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker set:kGAIScreenName
+           value:@"Webview"];
+    [tracker send:[[GAIDictionaryBuilder createAppView] build]];
+    
+    //self.navigationController.navigationBar.hidden = NO;
 }
 
-- (void)configureView
-{
-    // Update the user interface for the detail item.
-
-    if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
-    }
-}
-
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    [self configureView];
+    UIActivityIndicatorView *activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    [activityView startAnimating];
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:activityView];
+    NSArray *items = [[NSArray alloc] initWithObjects:item, nil];
+    [self.navigationController.toolbar setItems:items];
+    //[self.navigationController setToolbarHidden:TRUE];
+    
+    NSURL *myURL = [NSURL URLWithString: [self.url stringByAddingPercentEscapesUsingEncoding:
+                                          NSUTF8StringEncoding]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:myURL];
+    [self.webView loadRequest:request];
 }
 
 - (void)didReceiveMemoryWarning
