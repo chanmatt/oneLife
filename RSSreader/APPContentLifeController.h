@@ -15,5 +15,6 @@
 @property (nonatomic, strong) DataModel *data;
 
 - (IBAction)done;
+- (IBAction)custom;
 
 @end

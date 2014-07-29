@@ -24,5 +24,6 @@
 - (IBAction)button_4_2;
 
 - (IBAction)done;
+- (IBAction)custom;
 
 @end

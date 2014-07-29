@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "APPContentSearchController.h"
 
+#import "customSource.h"
+
 #import "GAI.h"
 #import "GAIFields.h"
 #import "GAIDictionaryBuilder.h"
@@ -206,10 +208,23 @@
     }
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"customSegwaySearch"]) {
+        UINavigationController *navigationController = segue.destinationViewController;
+        customSource *controller = (customSource *)navigationController.topViewController;
+        controller.data = sender;
+    }
+}
+
 - (IBAction)done
 {
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (IBAction)custom
+{
+    [self performSegueWithIdentifier:@"customSegwaySearch" sender:self.data];
+}
 
 @end

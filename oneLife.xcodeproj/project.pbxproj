@@ -118,6 +118,7 @@
 		F8CA6DBB1967332500FBD846 /* Running.png in Resources */ = {isa = PBXBuildFile; fileRef = F8CA6DBA1967332500FBD846 /* Running.png */; };
 		F8DAC1C0196A7AA800B367C2 /* APPContentNewsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8DAC1BF196A7AA800B367C2 /* APPContentNewsController.m */; };
 		F8DEC3F5194BA2CE000A96A1 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8DEC3F3194BA2CE000A96A1 /* EventKit.framework */; };
+		F8ED5BCE198700B3005B42E4 /* customSource.m in Sources */ = {isa = PBXBuildFile; fileRef = F8ED5BCD198700B3005B42E4 /* customSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -316,6 +317,8 @@
 		F8DAC1BE196A7A9200B367C2 /* APPContentNewsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APPContentNewsController.h; sourceTree = "<group>"; };
 		F8DAC1BF196A7AA800B367C2 /* APPContentNewsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPContentNewsController.m; sourceTree = "<group>"; };
 		F8DEC3F3194BA2CE000A96A1 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		F8ED5BCC198700B3005B42E4 /* customSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = customSource.h; sourceTree = "<group>"; };
+		F8ED5BCD198700B3005B42E4 /* customSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = customSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -323,6 +326,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F85FC7DF19675FD500842DD1 /* FacebookSDK.framework in Frameworks */,
+				F85182AF197F4B850058F6AC /* GooglePlus.framework in Frameworks */,
 				F85182AB197F4ACC0058F6AC /* MediaPlayer.framework in Frameworks */,
 				F85182A9197F4ABF0058F6AC /* CoreText.framework in Frameworks */,
 				F85182AD197F4B7C0058F6AC /* GoogleOpenSource.framework in Frameworks */,
@@ -339,7 +344,6 @@
 				F8914AC9194673F300689FE2 /* Foundation.framework in Frameworks */,
 				F8C88759196DC38B003F713E /* CFNetwork.framework in Frameworks */,
 				F8C88757196DC384003F713E /* libMailCore-ios.a in Frameworks */,
-				F85182AF197F4B850058F6AC /* GooglePlus.framework in Frameworks */,
 				F8B90ECF1964AEBE00F8344B /* AVFoundation.framework in Frameworks */,
 				F8BD657E1959FCC8007DFAE1 /* QuartzCore.framework in Frameworks */,
 				F8BD657C1959FCAE007DFAE1 /* Accounts.framework in Frameworks */,
@@ -348,7 +352,6 @@
 				F8DEC3F5194BA2CE000A96A1 /* EventKit.framework in Frameworks */,
 				F8914ACB194673F300689FE2 /* CoreGraphics.framework in Frameworks */,
 				F8914ACD194673F300689FE2 /* UIKit.framework in Frameworks */,
-				F85FC7DF19675FD500842DD1 /* FacebookSDK.framework in Frameworks */,
 				D76B4AD9EAC64C62AF69E98D /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,6 +376,8 @@
 				F8CA6DAB1966345100FBD846 /* APPSettingsViewController.m */,
 				F84D6C441970CE0300EFD578 /* emailSettings.h */,
 				F84D6C451970CE0D00EFD578 /* emailSettings.m */,
+				F8ED5BCC198700B3005B42E4 /* customSource.h */,
+				F8ED5BCD198700B3005B42E4 /* customSource.m */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -884,6 +889,7 @@
 				F84F6D22195DFF4E0084200E /* HHPanningTableViewCell.m in Sources */,
 				F875A395196A457D0027F6B1 /* SourceDatabase.m in Sources */,
 				F8914ADF194673F300689FE2 /* APPMasterViewController.m in Sources */,
+				F8ED5BCE198700B3005B42E4 /* customSource.m in Sources */,
 				F84F6D20195DFF4E0084200E /* HHDirectionPanGestureRecognizer.m in Sources */,
 				F85A4B6A1950C136002BF41A /* DataModel.m in Sources */,
 				F83370C819732DC500CDF9F9 /* aboutPage.m in Sources */,
@@ -1036,6 +1042,8 @@
 					"$(inherited)",
 					/Users/chanmatt/Documents/FacebookSDK,
 					"/Users/chanmatt/Downloads/google-plus-ios-sdk-1.7-2.0",
+					"$(PROJECT_DIR)/google-plus-ios-sdk-1.7-2.0",
+					"$(PROJECT_DIR)/FacebookSDK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RSSreader/oneLife-Prefix.pch";
@@ -1085,6 +1093,8 @@
 					"$(inherited)",
 					/Users/chanmatt/Documents/FacebookSDK,
 					"/Users/chanmatt/Downloads/google-plus-ios-sdk-1.7-2.0",
+					"$(PROJECT_DIR)/google-plus-ios-sdk-1.7-2.0",
+					"$(PROJECT_DIR)/FacebookSDK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RSSreader/oneLife-Prefix.pch";

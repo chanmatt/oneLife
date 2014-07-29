@@ -19,6 +19,7 @@
 #import <Social/Social.h>
 
 #import <CoreLocation/CoreLocation.h>
+#import "customSource.h"
 
 #import "GAI.h"
 #import "GAIFields.h"
@@ -476,11 +477,21 @@
         emailSettings *controller = (emailSettings *)navigationController.topViewController;
         controller.data = sender;
     }
+    if ([segue.identifier isEqualToString:@"customSegwayFeatured"]) {
+        UINavigationController *navigationController = segue.destinationViewController;
+        customSource *controller = (customSource *)navigationController.topViewController;
+        controller.data = sender;
+    }
 }
 
 - (IBAction)done
 {
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)custom
+{
+    [self performSegueWithIdentifier:@"customSegwayFeatured" sender:self.data];
 }
 
 @end

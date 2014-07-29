@@ -2037,6 +2037,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Search" id="d8i-jH-Ujz">
+                        <barButtonItem key="leftBarButtonItem" title="Custom" id="Bqx-Up-9cD">
+                            <connections>
+                                <action selector="custom" destination="nMl-Tt-3Ow" id="Nit-Zs-zkh"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="8YM-Td-do0">
                             <connections>
                                 <action selector="done" destination="nMl-Tt-3Ow" id="6xX-Ds-x8j"/>
@@ -2047,6 +2052,7 @@
                         <outlet property="searchDisplayController" destination="lkP-NZ-LAc" id="zEo-G2-lTF"/>
                         <outlet property="sourceSearchBar" destination="XTn-38-RPF" id="Ln3-90-an9"/>
                         <outlet property="tableView" destination="fOF-nR-m6z" id="DUw-39-igM"/>
+                        <segue destination="iMi-jg-4xb" kind="modal" identifier="customSegwaySearch" id="vHs-VC-A4U"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cRP-lg-Wk6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2111,6 +2117,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Apps" id="slU-tA-R0n">
+                        <barButtonItem key="leftBarButtonItem" title="Custom" id="M6v-ne-coF">
+                            <connections>
+                                <action selector="custom" destination="y1N-PB-AhJ" id="oTi-V0-WnW"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="h3P-TH-FqO">
                             <connections>
                                 <action selector="done" destination="y1N-PB-AhJ" id="NQ5-vx-g6L"/>
@@ -2120,6 +2131,7 @@
                     <connections>
                         <outlet property="tableView" destination="7t5-fS-mNV" id="ojI-VT-dFN"/>
                         <segue destination="XgE-J4-dqI" kind="modal" identifier="lifeEmailSettings" id="bXC-VD-SKn"/>
+                        <segue destination="iMi-jg-4xb" kind="modal" identifier="customSegwayLife" id="bsC-dk-biE"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Grg-zA-6JK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2545,6 +2557,11 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" systemItem="featured" id="YYC-p6-INA"/>
                     <navigationItem key="navigationItem" title="Featured" id="UhH-qt-ut5">
+                        <barButtonItem key="leftBarButtonItem" title="Custom" id="VaI-EZ-mlT">
+                            <connections>
+                                <action selector="custom" destination="tvX-F8-cHJ" id="MGh-ZB-34h"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="y09-Li-boX">
                             <connections>
                                 <action selector="done" destination="tvX-F8-cHJ" id="d9k-6X-7KG"/>
@@ -2556,6 +2573,7 @@
                     <connections>
                         <outlet property="tableView" destination="Kht-oh-C0z" id="Q9X-MJ-QQM"/>
                         <segue destination="XgE-J4-dqI" kind="modal" identifier="featuredEmailSettings" id="mPQ-JE-dyb"/>
+                        <segue destination="iMi-jg-4xb" kind="modal" identifier="customSegwayFeatured" id="7ZM-1G-4x2"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JHV-eN-ttY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2843,6 +2861,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Categories" id="hfi-AN-rGY">
+                        <barButtonItem key="leftBarButtonItem" title="Custom" id="Djc-my-Rz0">
+                            <connections>
+                                <action selector="custom" destination="6yy-hw-Xrg" id="Hxy-sQ-frT"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="Ur5-tu-YCj">
                             <connections>
                                 <action selector="done" destination="6yy-hw-Xrg" id="I0n-vu-E4P"/>
@@ -2852,6 +2875,7 @@
                     <connections>
                         <outlet property="tableView" destination="gm2-aR-ndq" id="iB4-kY-odI"/>
                         <segue destination="COT-Zb-uLD" kind="push" identifier="categorySegway" id="VBC-fT-hDU"/>
+                        <segue destination="iMi-jg-4xb" kind="modal" identifier="customSegwayCategories" id="Wba-KM-IhO"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ziM-Cm-gaf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2957,6 +2981,128 @@
             </objects>
             <point key="canvasLocation" x="3051" y="26"/>
         </scene>
+        <!--Custom Source-->
+        <scene sceneID="Jew-QX-WVe">
+            <objects>
+                <tableViewController id="5xz-rA-t7I" customClass="customSource" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="YYC-JE-CCj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="Xw3-t2-ghd">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="69" id="go3-yd-h3P">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="go3-yd-h3P" id="AcN-T5-bi9">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add your own source. oneLife supports most RSS/XML links!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5h6-4B-FiS">
+                                                    <rect key="frame" x="11" y="10" width="297" height="48"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="i2W-Ll-TtK">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="q8k-GA-cOT">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="q8k-GA-cOT" id="LFV-OQ-Q2v">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Jeff's Wordpress Blog" minimumFontSize="17" id="iD8-7R-0fM">
+                                                    <rect key="frame" x="135" y="7" width="174" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Source Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="K9b-UN-3P0">
+                                                    <rect key="frame" x="11" y="10" width="116" height="24"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="kSH-nG-otM">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="jSD-aD-UrK">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jSD-aD-UrK" id="Xuj-st-noZ">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="www.jeff.com/feed.xml" minimumFontSize="17" id="GTt-1a-DgU">
+                                                    <rect key="frame" x="67" y="7" width="242" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Link" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XCC-mq-Y7k">
+                                                    <rect key="frame" x="11" y="10" width="48" height="24"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="5xz-rA-t7I" id="61K-EB-DTy"/>
+                            <outlet property="delegate" destination="5xz-rA-t7I" id="O0l-Mz-qhp"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Custom Source" id="kjP-au-eyi">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="gCm-UW-Fet">
+                            <connections>
+                                <action selector="cancel" destination="5xz-rA-t7I" id="jq3-vx-Csr"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Add" style="done" id="2BQ-mb-qp0">
+                            <connections>
+                                <action selector="add" destination="5xz-rA-t7I" id="BPJ-NO-SXE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="sourceName" destination="iD8-7R-0fM" id="6ZT-D0-q0S"/>
+                        <outlet property="sourceURL" destination="GTt-1a-DgU" id="3Mn-8q-rqw"/>
+                        <outlet property="tableView" destination="YYC-JE-CCj" id="a8M-NR-KTY"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oze-Z7-Qjs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3065" y="878"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eNj-CB-4hr">
+            <objects>
+                <navigationController id="iMi-jg-4xb" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2Bv-hb-VRF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="5xz-rA-t7I" kind="relationship" relationship="rootViewController" id="68e-9M-Can"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LOo-Uf-JOW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2641" y="878"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Calendar_Icon.png" width="128" height="128"/>
@@ -2988,6 +3134,7 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="M7k-mR-rK0"/>
+        <segue reference="7ZM-1G-4x2"/>
         <segue reference="mPQ-JE-dyb"/>
     </inferredMetricsTieBreakers>
 </document>

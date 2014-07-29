@@ -132,7 +132,8 @@
 }
 
 - (void)parserDidEndDocument:(NSXMLParser *)parser {
-    
+    [parser abortParsing];
+    [delegate RSSParserDidReturnFeed:return_feed];
 }
 
 - (void)destroyParse{

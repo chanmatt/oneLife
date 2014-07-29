@@ -10,6 +10,8 @@
 #import "APPContentNewsController.h"
 #import "APPContentCategoryController.h"
 
+#import "customSource.h"
+
 #import "GAI.h"
 #import "GAIFields.h"
 #import "GAIDictionaryBuilder.h"
@@ -99,11 +101,21 @@
         APPContentCategoryController *controller = (APPContentCategoryController *)segue.destinationViewController;
         controller.data = sender;
     }
+    if ([segue.identifier isEqualToString:@"customSegwayCategories"]) {
+        UINavigationController *navigationController = segue.destinationViewController;
+        customSource *controller = (customSource *)navigationController.topViewController;
+        controller.data = sender;
+    }
 }
 
 - (IBAction)done
 {
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)custom
+{
+    [self performSegueWithIdentifier:@"customSegwayCategories" sender:self.data];
 }
 
 
